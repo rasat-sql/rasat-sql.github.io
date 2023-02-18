@@ -231,6 +231,126 @@
     </div>
   </section>
 
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Two Types of Mainstream Method for Text-to-SQL
+          </h2>
+          <div class="content has-text-justified">
+              <div>
+                <p style="font-size: 18px;"><strong>Graph</strong> Structure based method</p>
+                <ul>
+                  <li>Using graph structures to encode various complex relationships between inputs.</li>
+                  <li>Pros:
+                    <div>Better representation of structural information.
+                    </div>
+                  </li>
+                  <li>Cons:
+                    <div>The powerful representation capability of PLM not be fully utilized.
+                    </div>
+                    <div>Most AST-based decoder missing the real value.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div style="margin-top: 35px">
+                <p style="font-size: 18px;">Seq2seq Method by just fine tuning <strong>PLM</strong>
+                </p>
+                <ul>
+                  <li>Fine-tuning a pre-trained PLM(e.g. T5-3B) could yield results competitive performance with state-of-the-art.
+                  </li>
+                  <li>Pros:
+                    <div>Make full use of the powerful representation capabilities of PLM
+                    </div>
+                      <div>The predicted SQL query has real value
+                      </div>
+                  </li>
+                  <li>Cons:
+                    <div>Simple serialization results in the loss of structural information
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            <p style="margin-top: 35px;font-size: 18px;"><strong>Can we combine the two approaches?  </strong>
+            </p>
+            <img src="static/images/canWecCombione.png" alt="">
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">RASAT: Relation-Aware Self-Attention-augmented T5
+          </h2>
+          <div class="content has-text-justified">
+            <ul>
+              <li>The T5 model is taken as the base model, with its self-attention modules in the encoder substituted as relation-aware self-attentions.
+              </li>
+              <li>
+                <div>For single-turn setting, the serialize the inputs are:</div> 
+                <img src="static/images/SelfAttentionAugmented1.png" alt="">
+              </li>
+              <li>
+                <div>For multi-turn setting, the serialize the inputs are:</div> 
+                <img src="static/images/SelfAttentionAugmented2.png" alt="">
+              </li>
+            </ul>
+            <img src="static/images/SelfAttentionAugmented3.png" alt="">
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Relations in the Interaction Graph
+          </h2>
+          <div class="content has-text-justified">
+            <div>There are 5 types of relations in interaction graph (for more detail, please ref to our paper)：</div>
+            <ul>
+              <li>schema encoding
+              </li>
+              <li>
+                schema linking
+              </li>
+              <li>
+                question dependency structure
+              </li>
+              <li>
+                coreference between questions
+              </li>
+              <li>
+                database content mentions
+              </li>
+            </ul>
+            <img src="static/images/Relations.png" alt="">
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+
+
+
+
+
+
 
   <section class="section">
     <div class="container is-max-desktop">
